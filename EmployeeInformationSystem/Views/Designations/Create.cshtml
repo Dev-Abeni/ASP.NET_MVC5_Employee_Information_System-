@@ -1,0 +1,27 @@
+﻿@model EmployeeInformationSystem.ViewModel.DesignationFormViewModel
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Add a Designation</h2>
+<form>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Name)
+        @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Department)
+        @Html.DropDownListFor(m => m.Department, new SelectList(Model.Departments, "Id", "Name"), "Options", new { @class = "form-control " })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Salary)
+        @Html.DropDownListFor(m => m.Salary, new SelectList(Model.Salaries, "Id", "Value"), "Options", new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Description)
+        @Html.TextAreaFor(m => m.Description, new { @class = "form-control" })
+    </div>
+    <button type="submit" class="btn btn-success">Save</button>
+</form>
+

@@ -11,7 +11,6 @@ namespace EmployeeInformationSystem.Models
         public string Name { get; set; }
         public string Description { get; set; }
 
-
         public Department Department { get; set; }
         public Salary Salary { get; set; }
     }

@@ -1,0 +1,15 @@
+﻿@model EmployeeInformationSystem.Models.Salary
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Add a Salary</h2>
+<form>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Value)
+        @Html.TextBoxFor(m => m.Value, new { @class = "form-control" })
+    </div>
+    <button type="submit" class="btn btn-success">Save</button>
+</form>
+
